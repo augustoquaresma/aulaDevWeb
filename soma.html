@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaula  Dev Web - Soma</title>
+</head>
+<body>
+  <h1>Calculadora de Soma</h1>
+
+  <label for="num1">Primeiro número:</label>
+  <input type="number" id="num1">
+  <br><br>
+
+  <label for="num2">Segundo número:</label>
+  <input type="number" id="num2">
+  <br><br>
+
+  <button onclick="somar()">Somar</button>
+
+  <h2 id="resultado"></h2>
+
+  <script>
+    function somar() {
+      // pega os valores digitados
+      let num1 = Number(document.getElementById("num1").value);
+      let num2 = Number(document.getElementById("num2").value);
+
+      // calcula
+      let  soma = num1 + num2;
+
+      // exibe o resultado
+      document.getElementById("resultado").innerText = "Resultado: " + soma;
+    }
+  </script>
+</body>
+</html>
